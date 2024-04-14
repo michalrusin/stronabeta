@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <head>
+    <div class="btn" id="toggle-btn">
+      <div class="btn-outline btn-outline1"></div>
+      <div class="btn-outline btn-outline2"></div>
+      <div id="burger">
+        <span></span> 
+
+
+      </div>
+    </div>
+    <div class="over">
+      <svg viewBox="0 0 1000 1000">
+        <path d="M0 2S175 1 500 1s500 1 500 1V0H0Z"></path>
+      </svg>
+    </div>
+    <div class="menu">
+      <div class="primary-menu">
+        <div class="menu-container">
+          <div class="menu-item">
+            <a href="about.html">O mnie</a>
+            <div class="menu-item-rev"></div>
+          </div>
+          <div class="menu-item">
+            <a href="project.html">Moje Projekty</a>
+            <div class="menu-item-rev"></div>
+          </div>
+          <div class="menu-item">
+            <a href="#">Kontakt</a>
+            <div class="menu-item-rev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </head>
+    
+
+      <div class="sign">
+        O M<span class="fast-flicker">n</span>i<span class="flicker">e</span>
+      </div>
+     
+      <div class="calosc">
+        
+       
+        <div id="tyl" aria-hidden="true">
+          
+          <pre class="pre0">
+      <span class="variable">imie-i-nazwisko</span> <span class="character">=</span> <span class="string">"Michał Rusin"</span>
+      <span class="variable">wiek</span> <span class="character">=</span> <span class="number">16</span>
+      <span class="variable">szkoła</span> <span class="character">=</span> <span class="string">"Zespół Szkół nr.1 w Swarzędzu"</span>
+      <span class="variable">kierunek</span> <span class="character">=</span> <span class="string">"Technik Informatyk"</span>
+      </pre>
+      <img src="istockphoto-1337144146-612x612.jpg" class="twarz" alt="zdjecie autora">
+      <pre class="pre1"> 
+        <span class="bracket">umiejętnosci<span class="character">(IT)</span></span> <span class="character">=</span> <span class="bracket">{</span>
+          <span class="variable">Podstawy Programowania</span>: <span class="string">"C++/Arduino, C#, JS"</span><span class="character">,</span>
+          <span class="variable">Systemy Operacyjne</span>: <span class="string">"Windows, linux"</span><span class="character">,</span>
+          <span class="variable">Programy</span>: <span class="string">"Blender, Unity, Unreal Engine, ArduinoIDE, VS code, DaVinci"</span><span class="character">,</span>
+          <span class="variable">Konfiguracja urządzen sieciowych</span>: <span class="string">"Cisco, TP-LINK, MikroTik"</span><span class="character"></span>
+      <span class="bracket">}</span> </pre>
+      <pre class="pre2">
+        <span class="bracket">.hobby</span><span class="bracket">{</span>
+        <span class="string">  "robienie gier i programowanie arduino"</span><span class="character">;</span>
+        <span class="variable">  sporty<span class="bracket">(</span><span class="string">"Piłka nożna, koszykówka"<span class="character">,</span>"Rower, narty"</span><span class="bracket">)</span><span class="character">;</span></span>
+        <span class="string">  "robienie stron internetowych"</span><span class="character">;</span>
+        <span class="bracket">}</span></pre>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+       
+  </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"></script>
+      
+      <script>
+    // MAGIA 
+const mask = document.querySelector("#tyl");
+const tiln = gsap.timeline();
+tiln.to(mask, {
+  "--m1": "7.5%",
+  delay: 1  ,
+  duration: .7,
+  ease: "back.out(2)"
+}).to(mask, {
+  "--m2": "20%",
+  duration: .5,
+  delay: 0.5,
+  ease: "back.out(2)"
+});
+
+window.addEventListener("mousemove", (e) => {
+  const { clientX, clientY } = e;
+  const x = Math.round((clientX / window.innerWidth) * 100);
+  const y = Math.round((clientY / window.innerHeight) * 100);
+
+  gsap.to(mask, {
+    "--x": `${x}%`,
+    "--y": `${y}%`,
+    duration: 0.3,
+    ease: "sine.out"
+  });
+});
+
+
+
+
+
+
+//menu
+const tl = gsap.timeline({
+    paused: true
+  });
+  let path = document.querySelector("path");
+  let spanBefore = CSSRulePlugin.getRule("#burger span:before");
+  const dsa = document.querySelector('.over');
+  gsap.set(spanBefore, {background: "#000"});
+ 
+
+const sa = document.querySelector('.menu');
+gsap.set(sa, {visibility: "hidden", zIndex: 2 });
+gsap.set(path, {zIndex: 1});
+
+  
+
+  
+
+  function revealMenu(){
+    revealMenuItems();
+    const burger = document.getElementById("burger");
+    const toggleBtn = document.getElementById("toggle-btn");
+  
+    toggleBtn.onclick = function (e){
+      burger.classList.toggle
+      ("active");
+      tl.reversed(!tl.reversed());
+      
+    };
+  }
+
+  revealMenu();
+  
+  function revealMenuItems(){
+    const start = "M0 502S175 272 500 272s500 230 500 230V0H0z";
+    const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
+  
+      const power2 = "power2.inOut";
+      const power4 = "power4.inOut";
+  
+      tl.to("#burger", 1.25,{
+        marginTop: "5px",
+        x: -40,
+        y: 40,
+        ease: power4,
+      });
+      tl.to("#burger span", 1,{
+        background: "#e2e2dc",
+        ease: power2,
+      },
+      "<"
+    );
+    tl.to(spanBefore, 1,{
+      background: "#e2e2dc",
+      ease: power2,
+    },
+    "<"
+  );
+  tl.to(".btn .btn-outline", 1.25,{
+    x: -40,
+    y: 40,
+    width:"140px",
+    height:"140px",
+    border: "1px solid #e2e2dc",
+    ease: power4,
+  },
+    "<"
+  );
+  tl.to(
+    path, 0.6,{
+      attr:{
+        d: start,
+      },
+      ease: Power2.easeIn,
+      visibility: "visible",
+      zIndex: 2,
+    },
+    "<"
+  ).to(
+    path, .6,{
+      attr:{
+        d: end,
+        zIndex: 2,
+      },
+      ease: Power2.easeOut,
+      zIndex: 2,
+    }, ".5");
+    tl.to(".menu", 
+    .8,
+    {
+      visibility: "visible",
+      
+    },
+  ".65"
+  );
+  tl.to(".over", 
+    .1,
+    {
+      visibility: "visible",
+      zIndex: 2,
+    },
+  ".1"
+  );
+  tl.to(".menu-item > a",
+   1,
+   {
+    top: 0,
+    ease: "power2.out",
+    stagger:{
+      amount: 0.5,
+    }
+  },
+  "-=1").reverse();
+  } 
+
+</script>
+</body>
+</html>
