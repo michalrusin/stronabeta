@@ -895,7 +895,7 @@ z-index: 3;
 }
 
 #c1{
-  background-image: url("Nowy\ projekt.jpg");
+  background-image: url("./bgim.jpg");
 }
 #c2{
   background-image: linear-gradient(to bottom, #051937, #4a2e5c, #92406e, #d35c6b, #ff8c5b);
