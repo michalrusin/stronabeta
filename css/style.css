@@ -386,15 +386,6 @@ strong {
 }
 
 
-a {
-  text-decoration: none;
-  color: var(--dark-color);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
 @media (prefers-contrast: high) {
@@ -426,12 +417,14 @@ a {
   .twarz{
     transform: translate(-200%, 80%);
   }
-  .copy p{
-    display: flex;
-    justify-content: flex-start;
+  .copy p, p a{
+   
     width: 60%;
     text-align: left;
+    font-size: 1em;
+    padding-left: 20px;
   }
+  
   .copy h1{
     font-size: 5vw;
     font-weight: 500;
@@ -834,11 +827,12 @@ pre .number {
   top: 50%;
   left: 50%;
   width: 60%;
-  padding: 10px;
+  padding: 0px;
+  margin: 0;
   height: 600px;
   border-radius:10px;
   transform: translate3d(-50%, -50%, 0);
- 
+
 }
 
 .copy{
@@ -850,7 +844,8 @@ pre .number {
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   text-align: center;
-z-index: 3;
+  z-index: 3;
+  
 }
 
 .copy h1 span{
@@ -858,9 +853,15 @@ z-index: 3;
   color: white;
   -webkit-text-stroke: 0.2vw #000000;
 }
-.copy p{
+.copy p {
   color: rgb(255, 255, 255);
-  
+}
+
+.copy p a{
+  color: rgb(225, 0, 255);
+  font-weight: 600;
+  -webkit-text-stroke: 0.05vw #000000;
+  text-decoration: underline;
 }
 
 .prium{
@@ -895,10 +896,10 @@ z-index: 3;
 }
 
 #c1{
-  background-image: url("./bgim.jpg");
+  background: url("./css/2024.mp4");
 }
 #c2{
-  background-image: linear-gradient(to bottom, #051937, #4a2e5c, #92406e, #d35c6b, #ff8c5b);
+  background: url("./css/2024.mp4");
 }
 #c3{
   background-image: linear-gradient(to right top, #2e1a55, #241c4f, #1c1d49, #161e41, #131d39, #122641, #112e48, #12374f, #024e66, #006679, #007e87, #1b978f);
@@ -907,8 +908,14 @@ z-index: 3;
   background-image: radial-gradient(circle, #003fee, #1350db, #325cc4, #4a65ab, #5f6c90);
 }
 
-
-a{
-  color: rgb(153, 51, 51);
-  font-size: 2em;
+video {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
 }
+
+
+
