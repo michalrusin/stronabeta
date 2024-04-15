@@ -397,14 +397,14 @@ strong {
 @media only screen and (min-width: 1140px) {
   
   .pre0{
-    transform: translate(-50%, 20%);
+    transform: translate(-30vw, 10vh);
   }
   .pre1{
-    transform: translate(50%, 40%);
+    transform: translate(23vw, 10vh);
   }
   .pre2{
     position: relative;
-    transform: translate(-110%, 10vh);
+    transform: translate(-30vw, 2vh);
    
    
   }
