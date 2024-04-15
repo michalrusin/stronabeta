@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje umiejętnosci i Projekty</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="./js/main.js" defer></script>
 </head>
 <body>
     <head>
@@ -28,6 +29,10 @@
         <div class="primary-menu">
           <div class="menu-container">
             <div class="menu-item">
+              <a href="index.html">Landing Page</a>
+              <div class="menu-item-rev"></div>
+            </div>
+            <div class="menu-item">
               <a href="about.html">O mnie</a>
               <div class="menu-item-rev"></div>
             </div>
@@ -35,48 +40,54 @@
               <a href="project.html">Moje Projekty</a>
               <div class="menu-item-rev"></div>
             </div>
-            <div class="menu-item">
-              <a href="#">Kontakt</a>
-              <div class="menu-item-rev"></div>
-            </div>
+            
           </div>
         </div>
       </div>
     </head>
  
-
+    
     <div class="signpr">
-        Moje P<span class="fast-flicker">r</span>rojekty 
-        i
-        U<span class="flicker">m</span>ieję<span class="flicker">t</span>nosci
+        Proj<span class="fast-flicker">e</span>kty i U
+      
+        <span class="flicker">m</span>ieję<span class="flicker">t</span>nosci
       </div>
     <div class="slider">
         <div class="card" id="c1">
             <div class="copy">
                 <h1>Droga&nbsp;do&nbsp; przyszłosci&nbsp; 2023</h1>
                 <p>
-                  W 2023 roku, wraz z moimi kolegami z klasy, uczestniczyłem w ogólnopolskim konkursie "Droga do Przyszłości". Nasz zespół dotarł do finału, gdzie zajęliśmy jedno z czołowych miejsc poza podium. W ramach konkursu zajmowałem się modelowaniem budynków do makiety, a moim głównym wkładem było stworzenie mobilnej gry, która umożliwiała przeniesienie się do świata stworzonej przez nas makiety. Ta innowacyjna forma prezentacji naszego projektu przyciągnęła uwagę jury i uczestników, umożliwiając nam osiągnięcie sukcesu w konkurencyjnym środowisku konkursowym.
+                  W 2023 roku, wraz z moimi kolegami z klasy, uczestniczyłem w ogólnopolskim konkursie <a href="//doprzyszlosci.com">"Droga Do Przyszłosci".</a> Nasz zespół dotarł do finału, gdzie zajęliśmy jedno z czołowych miejsc poza podium. W ramach konkursu zajmowałem się modelowaniem budynków do makiety, a moim głównym wkładem było stworzenie mobilnej gry, która umożliwiała przeniesienie się do świata stworzonej przez nas makiety. Ta innowacyjna forma prezentacji naszego projektu przyciągnęła uwagę jury i uczestników, umożliwiając nam osiągnięcie sukcesu w konkurencyjnym środowisku konkursowym.
               </p>
                 <a href="about.html">O mnie</a>
                 
             </div>
+            <video autoplay muted loop contain>
+              <source src="./css/as12.mp4" type="video/mp4" />
+            </video>
         </div>
-        <div class="card" id="c2">
-            <div class="copy">
-                <h1>Modelowanie&nbsp;3D;</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                </p>
-
-            </div>
-        </div>
+       
         <div class="card" id="c3">
             <div class="copy">
-                <h1>Strony&nbsp;internetowe</h1>
+                <h1>Modelowanie&nbsp;&&nbsp;Druk&nbsp;3D</h1>
                 <p>
                 </p>
+                <div id="container3D" display="none"></div>
             </div>
         </div>
+        <div class="card" id="c2">
+          
+          <div class="copy">
+              <h1>EkoFilament&nbsp;2024</h1>
+              <p>
+                W bieżącym roku, razem z trzema innymi osobami z mojej klasy, bierzemy udział w drugiej edycji konkursu<a href="//doprzyszlosci.com">"Droga Do Przyszłosci".</a> Tematem tej edycji są ekoinnowacje. Pracujemy nad maszyną, która automatycznie przetwarza plastikowe butelki na filament do druku 3D. Całość opiera się na płytce Arduino. Obecnie jesteśmy już w finale, ale nasza maszyna wymaga jeszcze kilku poprawek. Warto wspomnieć, że cały projekt opiera się na druku 3D, dzieki czemu miałem okazje szlifować swoje umiejętnosci modelowania.     
+              </p>
+          
+          </div>
+          <video autoplay muted loop contain>
+            <source src="./css/2024.mp4" type="video/mp4" />
+          </video>
+      </div>
         <div class="card" id="c4">
             <div class="copy">
                 <h1>Strony&nbsp;Internetowe</h1>
@@ -87,6 +98,9 @@
                  TRD!
                 </p>
             </div>
+            <video autoplay muted loop contain>
+              <source src="./css/Untitled.mp4" type="video/mp4" />
+            </video>
         </div>
     </div>
  
@@ -101,248 +115,11 @@
 
 
 
-      <script>
-       
-  </script>
+     
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"></script>
-      <script>
-//menu
-
-const tl = gsap.timeline({
-    paused: true
-  });
-  let path = document.querySelector("path");
-  let spanBefore = CSSRulePlugin.getRule("#burger span:before");
-  const dsa = document.querySelector('.over');
-  gsap.set(spanBefore, {background: "#000"});
- 
-
-const sa = document.querySelector('.menu');
-gsap.set(sa, {visibility: "hidden", zIndex: 2 });
-gsap.set(path, {zIndex: 1});
-
-  
-
-  
-
-  function revealMenu(){
-    revealMenuItems();
-    const burger = document.getElementById("burger");
-    const toggleBtn = document.getElementById("toggle-btn");
-  
-    toggleBtn.onclick = function (e){
-      burger.classList.toggle
-      ("active");
-      tl.reversed(!tl.reversed());
       
-    };
-  }
-
-  revealMenu();
-  
-  function revealMenuItems(){
-    const start = "M0 502S175 272 500 272s500 230 500 230V0H0z";
-    const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
-  
-      const power2 = "power2.inOut";
-      const power4 = "power4.inOut";
-  
-      tl.to("#burger", 1.25,{
-        marginTop: "5px",
-        x: -40,
-        y: 40,
-        ease: power4,
-      });
-      tl.to("#burger span", 1,{
-        background: "#e2e2dc",
-        ease: power2,
-      },
-      "<"
-    );
-    tl.to(spanBefore, 1,{
-      background: "#e2e2dc",
-      ease: power2,
-    },
-    "<"
-  );
-  tl.to(".btn .btn-outline", 1.25,{
-    x: -40,
-    y: 40,
-    width:"140px",
-    height:"140px",
-    border: "1px solid #e2e2dc",
-    ease: power4,
-  },
-    "<"
-  );
-  tl.to(
-    path, 0.6,{
-      attr:{
-        d: start,
-      },
-      ease: Power2.easeIn,
-      visibility: "visible",
-      zIndex: 2,
-    },
-    "<"
-  ).to(
-    path, .6,{
-      attr:{
-        d: end,
-        zIndex: 2,
-      },
-      ease: Power2.easeOut,
-      zIndex: 2,
-    }, ".5");
-    tl.to(".menu", 
-    .8,
-    {
-      visibility: "visible",
-      
-    },
-  ".65"
-  );
-  tl.to(".over", 
-    .1,
-    {
-      visibility: "visible",
-      zIndex: 2,
-    },
-  ".1"
-  );
-  tl.to(".menu-item > a",
-   1,
-   {
-    top: 0,
-    ease: "power2.out",
-    stagger:{
-      amount: 0.5,
-    }
-  },
-  "-=1").reverse();
-  } 
-
-  //projekty
-CustomEase.create("cubic", "0.83, 0, 0.17, 1")
-let isAnimating = false;
-
-function splitTextIntoSpans(selector){
-  let elements = document.querySelectorAll(selector);
-  elements.forEach((element)=>{
-    let text = element.innerText;
-    let splitText = text
-    .split("")
-    .map(function(char){
-      return `<span>${char === "" ? "&nbsp;nbsp;" : char}</span>`;
-    })
-    .join("");
-    element.innerHTML = splitText;
-  })
-}
-
-function inCard(){
-  let cards = Array.from(document.querySelectorAll(".card"));
-  gsap.to(cards, {
-    y: (i) => -15 + 15*i + "%",
-    z: (i) => 15 * i,
-    duration: 1,
-    ease: "cubic",
-    stagger: -0.1,
-  });
-}
-
-
-document.addEventListener("DOMContentLoaded", function(){
-  splitTextIntoSpans(".copy h1");
-  inCard();
-
-  gsap.set(".copy h1 span", { y: -200});
-  gsap.set(".slider .card:last-child h1 span", {y: 0});
-});
-
-//mobile 
-document.addEventListener("touchend", function(){
-  if (isAnimating) return;
-  isAnimating = true;
-  let slider = document.querySelector(".slider");
-  let cards = Array.from(slider.querySelectorAll(".card"));
-  let lastCard = cards.pop();
-  let nextCard = cards[cards.length - 1];
-
-
-  gsap.to(lastCard.querySelectorAll(".copy h1 span"), {
-    y: 200,
-    duration: 0.75,
-    ease: "cubic",
-  });
-
-  gsap.to(lastCard, {
-    y: "+=150%",
-    duration: 0.75,
-    ease: "cubic",
-    onComplete: () =>{
-        slider.prepend(lastCard);
-        inCard();
-        gsap.set(lastCard.querySelectorAll(".copy h1 span", ".copy p span"), {y: -200});
-  
-        
-        setTimeout(() => {
-            isAnimating = false;
-        }, 1000);
-    },
-  });
-
-  gsap.to(nextCard.querySelectorAll(".copy h1 span",".copy p span"), {
-    y: 0,
-    duration: 1,
-    ease: "cubic",
-    stagger: 0.05,
-  })
-});
-
-//pc
-document.addEventListener("dblclick", function(){
-  if (isAnimating) return;
-  isAnimating = true;
-  let slider = document.querySelector(".slider");
-  let cards = Array.from(slider.querySelectorAll(".card"));
-  let lastCard = cards.pop();
-  let nextCard = cards[cards.length - 1];
-
-
-  gsap.to(lastCard.querySelectorAll(".copy h1 span"), {
-    y: 200,
-    duration: 0.75,
-    ease: "cubic",
-  });
-
-  gsap.to(lastCard, {
-    y: "+=150%",
-    duration: 0.75,
-    ease: "cubic",
-    onComplete: () =>{
-        slider.prepend(lastCard);
-        inCard();
-        gsap.set(lastCard.querySelectorAll(".copy h1 span", ".copy p span"), {y: -200});
-  
-        
-        setTimeout(() => {
-            isAnimating = false;
-        }, 1000);
-    },
-  });
-
-  gsap.to(nextCard.querySelectorAll(".copy h1 span",".copy p span"), {
-    y: 0,
-    duration: 1,
-    ease: "cubic",
-    stagger: 0.05,
-  })
-});
-
-
-</script>
 </body>
+
 </html>
