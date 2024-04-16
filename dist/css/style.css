@@ -415,7 +415,8 @@ strong {
     font-size: 3.3em;
   }
   .twarz{
-    transform: translate(-200%, 80%);
+    transform: translate(200%, 10%);
+  
   }
   .copy p, p a{
    
@@ -623,6 +624,7 @@ strong {
   height: 200px;
   border-radius: 190px;
   position: relative;
+  border: 10px gray solid;
 }
 pre {
   backdrop-filter: blur(15px) saturate(100%);
@@ -855,14 +857,26 @@ pre .number {
 }
 .copy p {
   color: rgb(255, 255, 255);
+ 
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
-.copy p a{
+#c2 .copy p a{
   color: rgb(225, 0, 255);
   font-weight: 600;
-  -webkit-text-stroke: 0.05vw #000000;
+  
   text-decoration: underline;
+  
 }
+#c1 .copy p a{
+  color: rgb(225, 0, 255);
+  font-weight: 600;
+  
+  text-decoration: underline;
+  
+}
+
 
 .prium{
   display: flex;
@@ -902,11 +916,9 @@ pre .number {
   background: url("./css/2024.mp4");
 }
 #c3{
-  background-image: linear-gradient(to right top, #2e1a55, #241c4f, #1c1d49, #161e41, #131d39, #122641, #112e48, #12374f, #024e66, #006679, #007e87, #1b978f);
+  background-image: linear-gradient(to right top, rgb(0, 0, 0), rgb(81, 46, 207));
 }
-#c4{
-  background-image: radial-gradient(circle, #003fee, #1350db, #325cc4, #4a65ab, #5f6c90);
-}
+
 
 video {
   object-fit: cover;
@@ -918,4 +930,6 @@ video {
 }
 
 
-
+.trd{
+  color: #00fffb;
+}

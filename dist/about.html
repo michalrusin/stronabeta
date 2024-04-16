@@ -26,7 +26,7 @@
       <div class="primary-menu">
         <div class="menu-container">
           <div class="menu-item">
-            <a href="index.html">Landing Page</a>
+            <a href="index.html">Strona Startowa</a>
             <div class="menu-item-rev"></div>
           </div>
           <div class="menu-item">
@@ -60,12 +60,13 @@
       <span class="variable">kierunek</span> <span class="character">=</span> <span class="string">"Technik Informatyk"</span>
       <span class="variable">e-mail</span> <span class="character">=</span> <span class="string">"michal.rusin.ti22@zs1-swarzedz.pl"</span>
       </pre>
-      <img src="istockphoto-1337144146-612x612.jpg" class="twarz" alt="zdjecie autora">
+      <img src="PORTRET.jpg" class="twarz" alt="zdjecie autora">
       <pre class="pre1"> 
         <span class="bracket">umiejętnosci<span class="character">(IT)</span></span> <span class="character">=</span> <span class="bracket">{</span>
           <span class="variable">Podstawy Programowania</span>: <span class="string">"C++/Arduino, C#, JS"</span><span class="character">,</span>
           <span class="variable">Systemy Operacyjne</span>: <span class="string">"Windows, linux"</span><span class="character">,</span>
-          <span class="variable">Programy</span>: <span class="string">"Blender, Unity, Unreal Engine, ArduinoIDE, VS code, DaVinci"</span><span class="character">,</span>
+          <span class="variable">Programy</span>: <span class="string">"Blender, Unity, Unreal Engine, ArduinoIDE, 
+            VS code, DaVinci, Excel"</span><span class="character">,</span>
           <span class="variable">Konfiguracja urządzen sieciowych</span>: <span class="string">"Cisco, TP-LINK, MikroTik"</span><span class="character"></span>
       <span class="bracket">}</span> </pre>
       <pre class="pre2">
@@ -92,10 +93,11 @@
   </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"></script>
-      
+      <script type="module" src="./js/all.js" defer></script>
       <script>
     // MAGIA 
-const mask = document.querySelector("#tyl");
+
+    const mask = document.querySelector("#tyl");
 const tiln = gsap.timeline();
 tiln.to(mask, {
   "--m1": "7.5%",
@@ -126,121 +128,6 @@ window.addEventListener("mousemove", (e) => {
 
 
 
-
-//menu
-const tl = gsap.timeline({
-    paused: true
-  });
-  let path = document.querySelector("path");
-  let spanBefore = CSSRulePlugin.getRule("#burger span:before");
-  const dsa = document.querySelector('.over');
-  gsap.set(spanBefore, {background: "#000"});
- 
-
-const sa = document.querySelector('.menu');
-gsap.set(sa, {visibility: "hidden", zIndex: 2 });
-gsap.set(path, {zIndex: 1});
-
-  
-
-  
-
-  function revealMenu(){
-    revealMenuItems();
-    const burger = document.getElementById("burger");
-    const toggleBtn = document.getElementById("toggle-btn");
-  
-    toggleBtn.onclick = function (e){
-      burger.classList.toggle
-      ("active");
-      tl.reversed(!tl.reversed());
-      
-    };
-  }
-
-  revealMenu();
-  
-  function revealMenuItems(){
-    const start = "M0 502S175 272 500 272s500 230 500 230V0H0z";
-    const end = "M0,1005S175,995,500,995s500,5,500,5V0H0Z";
-  
-      const power2 = "power2.inOut";
-      const power4 = "power4.inOut";
-  
-      tl.to("#burger", 1.25,{
-        marginTop: "5px",
-        x: -40,
-        y: 40,
-        ease: power4,
-      });
-      tl.to("#burger span", 1,{
-        background: "#e2e2dc",
-        ease: power2,
-      },
-      "<"
-    );
-    tl.to(spanBefore, 1,{
-      background: "#e2e2dc",
-      ease: power2,
-    },
-    "<"
-  );
-  tl.to(".btn .btn-outline", 1.25,{
-    x: -40,
-    y: 40,
-    width:"140px",
-    height:"140px",
-    border: "1px solid #e2e2dc",
-    ease: power4,
-  },
-    "<"
-  );
-  tl.to(
-    path, 0.6,{
-      attr:{
-        d: start,
-      },
-      ease: Power2.easeIn,
-      visibility: "visible",
-      zIndex: 2,
-    },
-    "<"
-  ).to(
-    path, .6,{
-      attr:{
-        d: end,
-        zIndex: 2,
-      },
-      ease: Power2.easeOut,
-      zIndex: 2,
-    }, ".5");
-    tl.to(".menu", 
-    .8,
-    {
-      visibility: "visible",
-      
-    },
-  ".65"
-  );
-  tl.to(".over", 
-    .1,
-    {
-      visibility: "visible",
-      zIndex: 2,
-    },
-  ".1"
-  );
-  tl.to(".menu-item > a",
-   1,
-   {
-    top: 0,
-    ease: "power2.out",
-    stagger:{
-      amount: 0.5,
-    }
-  },
-  "-=1").reverse();
-  } 
 
 </script>
 </body>
